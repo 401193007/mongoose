@@ -5,10 +5,8 @@ var User = require("../Schema/Schema");
  */
 function insert(){
 	var user = new User({
-		username : "John",
-		userpwd : "ah527200",
-		userage : 26,
-		logindate : new Date()
+		name : "new",
+		age : 12112
 	});
 
 	user.save(function(err,res){
