@@ -37,7 +37,7 @@ var Schema = mongoose.Schema;
 
 
 var UserSchema = new Schema({
-	username : {
+	name : {
 		type : String
 	},
 	age : {
@@ -46,7 +46,9 @@ var UserSchema = new Schema({
 	date : {
 		type : Date
 	}
-},{ collection: 'xxxs'});
+},{ collection: 'hahas'});
+
+UserSchema.index({name:1},{unique:true});
 
 // model是由schema生成的模型，可以对数据库的操作
 module.exports = mongoose.model("user",UserSchema);
