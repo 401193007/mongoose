@@ -23,20 +23,30 @@ var Schema = mongoose.Schema;
 
 // 　　Mixed
 
+// var UserSchema = new Schema({
+// 	name : {
+// 		type : String
+// 	},
+// 	age : {
+// 		type : Number
+// 	}
+// });
+
+// model是由schema生成的模型，可以对数据库的操作
+// module.exports = mongoose.model("xxxs",UserSchema);
+
+
 var UserSchema = new Schema({
 	username : {
 		type : String
 	},
-	userpwd : {
-		type : String
-	},
-	userage : {
+	age : {
 		type : Number
 	},
-	logindate : {
+	date : {
 		type : Date
 	}
-});
+},{ collection: 'xxxs'});
 
 // model是由schema生成的模型，可以对数据库的操作
-module.exports = mongoose.model("User",UserSchema);
+module.exports = mongoose.model("user",UserSchema);
